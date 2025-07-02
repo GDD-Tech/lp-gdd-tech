@@ -11,7 +11,7 @@ const Navigation: FC = () => {
                     padding: 0,
                     margin: 0,
                     listStyle: 'none',
-                    '& a': { fontSize: 18, color: 'black', fontWeight: 500 },
+                    '& a': { fontSize: 16, color: 'black', fontWeight: 500 },
                     '& a:hover': { color: 'primary.main' },
                     gap: 6,
                 }}

@@ -3,7 +3,7 @@ import { type FC } from 'react'
 
 const MainContent: FC = () => {
     return (
-        <Box component={'main'}>
+        <Box component={'main'} mt={'64px'} height={1000}>
             <Box component={'section'} id="apresentacao">
                 descricao botao de contato
             </Box>

@@ -1,12 +1,35 @@
-import { Box, Container, AppBar as MUIAppBar, Toolbar } from '@mui/material'
+import {
+    Box,
+    Container,
+    AppBar as MUIAppBar,
+    Toolbar,
+    useScrollTrigger,
+    useTheme,
+} from '@mui/material'
 import { type FC } from 'react'
 import logo from '../../assets/logo.svg'
 import ContactButton from '../global/ContactButton'
 import Navigation from './Navigation'
 
 const AppBar: FC = () => {
+    const trigger = useScrollTrigger({
+        disableHysteresis: true,
+        threshold: 0,
+    })
+
+    const theme = useTheme()
+
     return (
-        <MUIAppBar position="static" elevation={0} sx={{ bgcolor: 'white' }}>
+        <MUIAppBar
+            elevation={0}
+            sx={{
+                bgcolor: 'white',
+                borderBottom: trigger
+                    ? `1px solid ${theme.palette.divider}`
+                    : 'none',
+                transition: 'border-bottom 0.3s ease',
+            }}
+        >
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
                     <Box
@@ -17,7 +40,7 @@ const AppBar: FC = () => {
                         p={1}
                     >
                         <img src={logo} alt="Logo do site" />
-                        <Navigation/>
+                        <Navigation />
                         <ContactButton />
                     </Box>
                 </Toolbar>
