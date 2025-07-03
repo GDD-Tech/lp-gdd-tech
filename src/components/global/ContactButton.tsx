@@ -12,7 +12,6 @@ const ContactButton: FC<ButtonProps> = (props) => {
             target="_blank"
             rel="noopener noreferrer"
             sx={{
-                height: 44,
                 px: 3,
                 borderRadius: 2,
                 textTransform: 'none',
