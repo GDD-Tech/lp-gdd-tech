@@ -10,7 +10,7 @@ import {
     useTheme
 } from '@mui/material'
 import { useState, type FC } from 'react'
-import logo from '../../assets/logo.svg'
+import gdd_logo from '../../assets/gdd_logo.png'
 import ContactButton from '../global/ContactButton'
 import MobileNavigation from './MobileNavigation'
 import Navigation from './Navigation'
@@ -51,7 +51,7 @@ const AppBar: FC = () => {
                             flex={1}
                             p={1}
                         >
-                            <img src={logo} alt="Logo do site" />
+                            <img src={gdd_logo} width={100} alt="Logo do site" />
                             <Navigation display={isMobile ? 'none' : 'block'} />
                             <ContactButton
                                 sx={{ display: isMobile ? 'none' : 'block' }}
