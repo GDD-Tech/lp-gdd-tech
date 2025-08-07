@@ -8,6 +8,7 @@ import {
 } from '@mui/icons-material'
 import { Box, Container, Grid, Paper, Typography } from '@mui/material'
 import { type FC } from 'react'
+import Section from '../global/Section'
 
 interface FeatureItemProps {
     icon: React.ReactNode
@@ -70,12 +71,7 @@ const FeatureItem: FC<FeatureItemProps> = ({ icon, title, description }) => {
 
 const Features: FC = () => {
     return (
-        <Box
-            component={'section'}
-            id="features"
-            my={4}
-            sx={{ scrollMarginTop: '80px' }}
-        >
+        <Section id="features" my={4}>
             <Container
                 sx={{
                     textAlign: 'center',
@@ -101,7 +97,7 @@ const Features: FC = () => {
                     seu negócio.
                 </Typography>
             </Container>
-            <Paper sx={{ borderRadius: 4, mx: {xs: 2, lg: 4}, py: 8, px: 4 }}>
+            <Paper sx={{ borderRadius: 4, mx: { xs: 2, lg: 4 }, py: 8, px: 4 }}>
                 <Grid container spacing={8}>
                     <Grid size={{ xs: 12, sm: 6, md: 4 }}>
                         <FeatureItem
@@ -147,7 +143,7 @@ const Features: FC = () => {
                     </Grid>
                 </Grid>
             </Paper>
-        </Box>
+        </Section>
     )
 }
 

@@ -2,15 +2,14 @@ import { Box } from '@mui/system'
 import { type FC } from 'react'
 import Features from './Features'
 import { Toolbar } from '@mui/material'
+import Section from '../global/Section'
 
 const MainContent: FC = () => {
     return (
         <>
             <Toolbar />
             <Box component={'main'}>
-                <Box component={'section'} id="apresentacao">
-                    descricao botao de contato
-                </Box>
+                <Section id="apresentacao">descricao botao de contato</Section>
                 <Features />
                 <Box component={'section'} id="motivacao do cliente">
                     <div id="motivacao1">

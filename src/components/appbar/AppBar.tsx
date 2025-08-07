@@ -7,7 +7,7 @@ import {
     Toolbar,
     useMediaQuery,
     useScrollTrigger,
-    useTheme
+    useTheme,
 } from '@mui/material'
 import { useState, type FC } from 'react'
 import gdd_logo from '../../assets/gdd_logo.png'
@@ -33,6 +33,7 @@ const AppBar: FC = () => {
     return (
         <>
             <MUIAppBar
+                position="fixed"
                 elevation={0}
                 sx={{
                     bgcolor: 'white',
@@ -43,15 +44,19 @@ const AppBar: FC = () => {
                 }}
             >
                 <Container maxWidth="xl">
-                    <Toolbar disableGutters>
+                    <Toolbar disableGutters sx={{ px: 1 }}>
                         <Box
-                            display={'flex'}
-                            justifyContent={'space-between'}
-                            alignItems={'center'}
+                            display="flex"
+                            justifyContent="space-between"
+                            alignItems="center"
                             flex={1}
-                            p={1}
+                            width="100%"
                         >
-                            <img src={gdd_logo} width={100} alt="Logo do site" />
+                            <img
+                                src={gdd_logo}
+                                width={100}
+                                alt="Logo do site"
+                            />
                             <Navigation display={isMobile ? 'none' : 'block'} />
                             <ContactButton
                                 sx={{ display: isMobile ? 'none' : 'block' }}
