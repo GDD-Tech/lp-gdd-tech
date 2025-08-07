@@ -23,8 +23,8 @@ const Navigation: FC<BoxProps> = ({ ...props }) => {
                     }}
                 >
                     <ListItem sx={{ padding: 0 }}>
-                        <Link href="#home" underline="none">
-                            Seção 1
+                        <Link href="#features" underline="none">
+                            Soluções
                         </Link>
                     </ListItem>
                     <ListItem sx={{ padding: 0 }}>

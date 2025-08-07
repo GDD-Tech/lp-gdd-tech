@@ -1,35 +1,38 @@
 import { Box } from '@mui/system'
 import { type FC } from 'react'
+import Features from './Features'
+import { Toolbar } from '@mui/material'
 
 const MainContent: FC = () => {
     return (
-        <Box component={'main'} mt={'64px'} height={1000}>
-            <Box component={'section'} id="apresentacao">
-                descricao botao de contato
+        <>
+            <Toolbar />
+            <Box component={'main'}>
+                <Box component={'section'} id="apresentacao">
+                    descricao botao de contato
+                </Box>
+                <Features />
+                <Box component={'section'} id="motivacao do cliente">
+                    <div id="motivacao1">
+                        imagem por que ter um site/aplicacao/solucao (contexto)
+                    </div>
+                    <div id="motivacao2">
+                        imagem por que ter um site/aplicacao/solucao (contexto)
+                    </div>
+                </Box>
+                <Box component={'section'} id="caminho ao sucesso">
+                    processo da solucao do problema
+                </Box>
+                <Box component={'section'} id="projetos desenvolvidos">
+                    portifolio
+                </Box>
+                <Box component={'section'} id="estimo para entrar em contato">
+                    entre em contato para criar sua aplicacao...
+                </Box>
+                <Box component={'section'} id="faq"></Box>
+                <Box component={'section'} id="formulario de contato"></Box>
             </Box>
-            <Box component={'section'} id="o que oferecemos">
-                resumo lista de beneficios
-            </Box>
-            <Box component={'section'} id="motivacao do cliente">
-                <div id="motivacao1">
-                    imagem por que ter um site/aplicacao/solucao (contexto)
-                </div>
-                <div id="motivacao2">
-                    imagem por que ter um site/aplicacao/solucao (contexto)
-                </div>
-            </Box>
-            <Box component={'section'} id="caminho ao sucesso">
-                processo da solucao do problema
-            </Box>
-            <Box component={'section'} id="projetos desenvolvidos">
-                portifolio
-            </Box>
-            <Box component={'section'} id="estimo para entrar em contato">
-                entre em contato para criar sua aplicacao...
-            </Box>
-            <Box component={'section'} id="faq"></Box>
-            <Box component={'section'} id="formulario de contato"></Box>
-        </Box>
+        </>
     )
 }
 
