@@ -16,6 +16,7 @@ const Section: FC<SectionProps> = ({ id, children, ...props }) => (
                 xs: '56px',
                 sm: '64px',
             },
+            ...props.sx
         }}
     >
         {children}

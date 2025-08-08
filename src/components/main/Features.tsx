@@ -9,6 +9,8 @@ import {
 import { Box, Container, Grid, Paper, Typography } from '@mui/material'
 import { type FC } from 'react'
 import Section from '../global/Section'
+import Title from '../global/Title'
+import Subtitle from '../global/Subtitle'
 
 interface FeatureItemProps {
     icon: React.ReactNode
@@ -27,7 +29,7 @@ const FeatureItem: FC<FeatureItemProps> = ({ icon, title, description }) => {
             sx={{
                 transition: 'background-color 0.3s ease',
                 '&:hover .feature-icon': {
-                    bgcolor: 'primary.main',
+                    bgcolor: '#005bb5',
                     color: 'white',
                 },
             }}
@@ -42,7 +44,7 @@ const FeatureItem: FC<FeatureItemProps> = ({ icon, title, description }) => {
                 borderRadius={4}
                 className="feature-icon"
                 sx={{
-                    color: 'primary.main',
+                    color: '#005bb5',
                     transition: 'background-color 0.3s ease, color 0.3s ease',
                 }}
             >
@@ -50,28 +52,26 @@ const FeatureItem: FC<FeatureItemProps> = ({ icon, title, description }) => {
             </Box>
             <Typography
                 variant="h6"
-                fontSize={22}
-                fontWeight={'bold'}
+                fontSize={'1.37rem'}
+                fontWeight={600}
                 textAlign={'center'}
             >
                 {title}
             </Typography>
-            <Typography
-                variant="body2"
-                fontSize={16}
-                color="text.secondary"
-                fontWeight={500}
-                textAlign={'center'}
-            >
-                {description}
-            </Typography>
+            <Subtitle textAlign={'center'}>{description}</Subtitle>
         </Box>
     )
 }
 
 const Features: FC = () => {
     return (
-        <Section id="features" my={4}>
+        <Section
+            id="features"
+            py={4}
+            sx={{
+                background: 'linear-gradient(180deg, white 50%, #FFF0EC 100%)',
+            }}
+        >
             <Container
                 sx={{
                     textAlign: 'center',
@@ -81,21 +81,12 @@ const Features: FC = () => {
                     mx: 'auto',
                 }}
             >
-                <Typography variant="h2" fontSize={44} fontWeight="bold">
-                    Soluções Digitais Sob Medida
-                </Typography>
-                <Typography
-                    variant="h6"
-                    fontSize={16}
-                    color="text.secondary"
-                    maxWidth={600}
-                    mx="auto"
-                    mt={2}
-                >
+                <Title>Soluções Digitais Sob Medida</Title>
+                <Subtitle maxWidth={600} mx="auto" mt={2}>
                     Desenvolvemos softwares personalizados, landing pages
                     otimizadas e soluções completas de T.I. para impulsionar o
                     seu negócio.
-                </Typography>
+                </Subtitle>
             </Container>
             <Paper sx={{ borderRadius: 4, mx: { xs: 2, lg: 4 }, py: 8, px: 4 }}>
                 <Grid container spacing={8}>
