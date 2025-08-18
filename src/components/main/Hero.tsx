@@ -5,6 +5,13 @@ import Section from '../global/Section'
 import Title from '../global/Title'
 import Subtitle from '../global/Subtitle'
 
+const scrollToSection = (id: string) => {
+    const el = document.getElementById(id)
+    if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
+}
+
 const Hero: FC = () => {
     return (
         <Section
@@ -55,7 +62,9 @@ const Hero: FC = () => {
                             <Button
                                 variant="contained"
                                 size="large"
-                                href='#contato'
+                                onClick={() => {
+                                    scrollToSection('contato')
+                                }}
                                 disableElevation
                                 sx={{
                                     backgroundColor: '#004583',
@@ -69,7 +78,9 @@ const Hero: FC = () => {
                             <Button
                                 variant="outlined"
                                 size="large"
-                                href='#solucoes'
+                                onClick={() => {
+                                    scrollToSection('solucoes')
+                                }}
                                 sx={{
                                     borderColor: '#004583',
                                     color: '#004583',
