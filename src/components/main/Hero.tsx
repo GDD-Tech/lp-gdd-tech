@@ -35,18 +35,18 @@ const Hero: FC = () => {
                             }}
                             fontWeight={500}
                         >
-                            Criado para Web, Mobile e Soluções de Software
+                            Web • Mobile • Software sob medida
                         </Typography>
 
                         <Title sx={{ mt: 1 }} gutterBottom>
-                            Transformamos ideias em software
+                            Tecnologia que acelera seu crescimento
                         </Title>
                         <Subtitle sx={{ mb: 3 }}>
-                            Desenvolvimento de software sob medida para criar
-                            produtos digitais rápidos, escaláveis e de alto
-                            impacto.
+                            Desenvolvemos aplicações sob medida, rápidas e
+                            escaláveis, para transformar sua ideia em um produto
+                            digital de impacto.
                         </Subtitle>
-                        
+
                         <Stack
                             direction={{ xs: 'column', sm: 'row' }}
                             spacing={2}
@@ -55,6 +55,7 @@ const Hero: FC = () => {
                             <Button
                                 variant="contained"
                                 size="large"
+                                href='#contato'
                                 disableElevation
                                 sx={{
                                     backgroundColor: '#004583',
@@ -63,11 +64,12 @@ const Hero: FC = () => {
                                     },
                                 }}
                             >
-                                Solicitar Orçamento
+                                Começar projeto
                             </Button>
                             <Button
                                 variant="outlined"
                                 size="large"
+                                href='#solucoes'
                                 sx={{
                                     borderColor: '#004583',
                                     color: '#004583',
@@ -87,6 +89,8 @@ const Hero: FC = () => {
                         sx={{
                             textAlign: 'center',
                             display: { xs: 'none', md: 'flex' },
+                            justifyContent: 'center',
+                            alignItems: 'center',
                         }}
                     >
                         <img
@@ -94,6 +98,7 @@ const Hero: FC = () => {
                             alt="Tecnologia"
                             style={{
                                 maxWidth: '100%',
+                                maxHeight: 400,
                                 height: 'auto',
                             }}
                         />

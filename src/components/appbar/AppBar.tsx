@@ -3,6 +3,7 @@ import {
     Box,
     Container,
     IconButton,
+    Link,
     AppBar as MUIAppBar,
     Toolbar,
     useMediaQuery,
@@ -52,11 +53,14 @@ const AppBar: FC = () => {
                             flex={1}
                             width="100%"
                         >
-                            <img
-                                src={gdd_logo}
-                                width={100}
-                                alt="Logo do site"
-                            />
+                            <Link href="#" underline="none">
+                                <img
+                                    src={gdd_logo}
+                                    width={100}
+                                    alt="Logo do site"
+                                />
+                            </Link>
+
                             <Navigation display={isMobile ? 'none' : 'block'} />
                             <ContactButton
                                 sx={{ display: isMobile ? 'none' : 'block' }}

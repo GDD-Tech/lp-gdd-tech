@@ -23,23 +23,18 @@ const Navigation: FC<BoxProps> = ({ ...props }) => {
                     }}
                 >
                     <ListItem sx={{ padding: 0 }}>
-                        <Link href="#features" underline="none">
+                        <Link href="#solucoes" underline="none">
                             Soluções
                         </Link>
                     </ListItem>
                     <ListItem sx={{ padding: 0 }}>
-                        <Link href="#about" underline="none">
-                            Seção 2
+                        <Link href="#sobre" underline="none">
+                            Sobre
                         </Link>
                     </ListItem>
-                    <ListItem sx={{ padding: 0 }}>
-                        <Link href="#services" underline="none">
-                            Seção 3
-                        </Link>
-                    </ListItem>
-                    <ListItem sx={{ padding: 0 }}>
-                        <Link href="#contact" underline="none">
-                            Seção 4
+                    <ListItem sx={{ padding: 0, minWidth: 110 }}>
+                        <Link href="#funcionamento" underline="none">
+                            Como funciona
                         </Link>
                     </ListItem>
                 </List>

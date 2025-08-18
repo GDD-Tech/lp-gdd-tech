@@ -7,6 +7,8 @@ import Features from './Features'
 import Hero from './Hero'
 import Portfolio from './Portfolio'
 import Timeline from './Timeline'
+import Motivations from './Motivations'
+import WhatsAppButton from '../global/WhatsAppButton'
 
 const MainContent: FC = () => {
     return (
@@ -15,12 +17,13 @@ const MainContent: FC = () => {
             <Box component={'main'}>
                 <Hero />
                 <Features />
-                {/* <Motivations /> */}
+                <Motivations />
                 <Timeline />
                 <Portfolio />
                 <FAQ />
                 <Contact />
             </Box>
+            <WhatsAppButton />
         </>
     )
 }

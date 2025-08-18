@@ -13,10 +13,13 @@ const ContactButton: FC<ButtonProps> = (props) => {
             rel="noopener noreferrer"
             sx={{
                 px: 3,
-                borderRadius: 2,
                 textTransform: 'none',
                 fontWeight: 600,
                 fontSize: 16,
+                backgroundColor: '#004583',
+                ':hover': {
+                    backgroundColor: '#005bb5',
+                },
                 ...props.sx,
             }}
         >

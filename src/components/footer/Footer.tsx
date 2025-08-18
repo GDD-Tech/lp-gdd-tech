@@ -85,6 +85,7 @@ const Footer: FC = () => {
                         gap={2}
                         flex={1}
                         sx={{ '& > button': { color: 'white' } }}
+                        mr={{ xs: undefined, md: 6 }}
                     >
                         <Button variant="text">Política de Privacidade</Button>
                         <Button variant="text">Termo de Uso</Button>
