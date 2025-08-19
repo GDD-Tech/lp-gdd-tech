@@ -33,9 +33,7 @@ const Features: FC = () => {
             >
                 <Title>Soluções Digitais Sob Medida</Title>
                 <Subtitle maxWidth={600} mx="auto" mt={2}>
-                    Desenvolvemos softwares personalizados, landing pages
-                    otimizadas e soluções completas de T.I. para impulsionar o
-                    seu negócio.
+                    Criamos softwares e ferramentas digitais que resolvem problemas reais e impulsionam o crescimento da sua empresa.
                 </Subtitle>
             </Container>
             <Paper
@@ -51,42 +49,42 @@ const Features: FC = () => {
                         <FeatureItem
                             icon={<Code fontSize="large" />}
                             title="Desenvolvimento de Software"
-                            description="Sistemas personalizados, escaláveis e seguros para empresas de todos os tamanhos."
+                            description="Aplicações web e mobile projetadas de acordo com as necessidades do seu negócio."
                         />
                     </Grid>
                     <Grid size={{ xs: 12, sm: 6, md: 4 }}>
                         <FeatureItem
                             icon={<Web fontSize="large" />}
                             title="Landing Pages de Alta Conversão"
-                            description="Páginas rápidas, responsivas e pensadas para maximizar resultados."
+                            description="Páginas responsivas e otimizadas para gerar leads e aumentar vendas."
                         />
                     </Grid>
                     <Grid size={{ xs: 12, sm: 6, md: 4 }}>
                         <FeatureItem
                             icon={<SupportAgent fontSize="large" />}
                             title="Consultoria em T.I."
-                            description="Análise estratégica e implementação de soluções tecnológicas sob demanda."
+                            description="Orientação estratégica para escolher e implementar a tecnologia certa no momento certo."
                         />
                     </Grid>
                     <Grid size={{ xs: 12, sm: 6, md: 4 }}>
                         <FeatureItem
                             icon={<IntegrationInstructions fontSize="large" />}
                             title="Integrações e APIs"
-                            description="Integramos sistemas com ERPs, CRMs e APIs externas para automatizar processos."
+                            description="Conectamos sistemas, ERPs, CRMs e ferramentas externas em um único fluxo digital."
                         />
                     </Grid>
                     <Grid size={{ xs: 12, sm: 6, md: 4 }}>
                         <FeatureItem
                             icon={<Security fontSize="large" />}
                             title="Suporte Técnico Especializado"
-                            description="Manutenção, monitoramento e suporte para manter seu sistema sempre disponível."
+                            description="Monitoramento e manutenção contínuos para manter tudo funcionando."
                         />
                     </Grid>
                     <Grid size={{ xs: 12, sm: 6, md: 4 }}>
                         <FeatureItem
                             icon={<DesignServices fontSize="large" />}
                             title="UX/UI Design"
-                            description="Experiência do usuário centrada em usabilidade, performance e estética."
+                            description="Interfaces funcionais, intuitivas e agradáveis para seus usuários."
                         />
                     </Grid>
                 </Grid>

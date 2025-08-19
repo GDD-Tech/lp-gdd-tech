@@ -43,9 +43,9 @@ const Hero: FC = () => {
                             Tecnologia que acelera seu crescimento
                         </Title>
                         <Subtitle sx={{ mb: 3 }}>
-                            Desenvolvemos aplicações sob medida, rápidas e
-                            escaláveis, para transformar sua ideia em um produto
-                            digital de impacto.
+                            Do planejamento à entrega, desenvolvemos soluções
+                            digitais ágeis e seguras para gerar resultados reais
+                            no seu negócio.
                         </Subtitle>
 
                         <Stack

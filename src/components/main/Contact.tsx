@@ -1,5 +1,4 @@
-import { type FC } from 'react'
-import Section from '../global/Section'
+import { WhatsApp } from '@mui/icons-material'
 import {
     Box,
     Button,
@@ -8,11 +7,27 @@ import {
     TextField,
     Typography,
 } from '@mui/material'
-import Title from '../global/Title'
+import { useState, type FC } from 'react'
+import Section from '../global/Section'
 import Subtitle from '../global/Subtitle'
-import { WhatsApp } from '@mui/icons-material'
+import Title from '../global/Title'
+
+const whatsappNumber = import.meta.env.VITE_WHATSAPP_NUMBER
 
 const Contact: FC = () => {
+    const [message, setMessage] = useState<string>('')
+
+    const handleSubmit = (e: React.FormEvent) => {
+        e.preventDefault()
+
+        if (!message.trim()) return
+
+        const encodedMessage = encodeURIComponent(message)
+        const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`
+
+        window.open(whatsappLink, '_blank')
+    }
+
     return (
         <Section
             id="contato"
@@ -51,6 +66,7 @@ const Contact: FC = () => {
                         component="form"
                         noValidate
                         autoComplete="off"
+                        onSubmit={handleSubmit}
                         sx={{
                             display: 'flex',
                             flexDirection: 'column',
@@ -59,52 +75,14 @@ const Contact: FC = () => {
                             mx: 'auto',
                         }}
                     >
-                        {/* <Box
-                            sx={{
-                                display: 'flex',
-                                flexDirection: { xs: 'column', md: 'row' },
-                                gap: 2,
-                            }}
-                        >
-                            <TextField
-                                fullWidth
-                                placeholder="Digite seu nome"
-                                variant="outlined"
-                            />
-                            <TextField
-                                fullWidth
-                                placeholder="Empresa (opcional)"
-                                variant="outlined"
-                            />
-                        </Box>
-
-                        <Box
-                            sx={{
-                                display: 'flex',
-                                flexDirection: { xs: 'column', md: 'row' },
-                                gap: 2,
-                            }}
-                        >
-                            <TextField
-                                fullWidth
-                                placeholder="Digite seu e-mail"
-                                type="email"
-                                variant="outlined"
-                            />
-                            <TextField
-                                fullWidth
-                                placeholder="Digite seu telefone"
-                                type="tel"
-                                variant="outlined"
-                            />
-                        </Box> */}
-
                         <TextField
                             fullWidth
                             placeholder="Conte-nos sobre a sua ideia"
                             multiline
                             rows={4}
                             variant="outlined"
+                            value={message}
+                            onChange={(e) => setMessage(e.target.value)}
                         />
 
                         <Box textAlign="center" mt={2}>
@@ -122,6 +100,7 @@ const Contact: FC = () => {
                                 disableElevation
                                 startIcon={<WhatsApp />}
                                 color="success"
+                                type="submit"
                                 sx={{
                                     px: 6,
                                     py: 1.5,

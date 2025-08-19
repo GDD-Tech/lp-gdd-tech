@@ -27,7 +27,7 @@ const Timeline: FC = () => {
                     mx: 'auto',
                 }}
             >
-                <Title>Como funciona?</Title>
+                <Title>Seu projeto em 3 passos</Title>
                 <Subtitle maxWidth={600} mx="auto" mt={2}>
                     Entre em contato conosco, defina o escopo do seu projeto e
                     acompanhe sua empresa alcançar novos resultados.
@@ -47,14 +47,14 @@ const Timeline: FC = () => {
                         <FeatureItem
                             icon={<ContactMail fontSize="large" />}
                             title="1. Entre em contato"
-                            description="Converse com nossa equipe e compartilhe suas necessidades e objetivos."
+                            description="Conte sua ideia ou necessidade para nossa equipe."
                         />
                     </Grid>
                     <Grid size={{ xs: 12, sm: 6, md: 4 }}>
                         <FeatureItem
                             icon={<AssignmentTurnedIn fontSize="large" />}
                             title="2. Defina o escopo"
-                            description="Planejamos a solução ideal para o seu negócio, seja sistema, site ou consultoria."
+                            description="Planejamos a solução ideal para o seu negócio, seja um sistema, site ou consultoria."
                         />
                     </Grid>
                     <Grid size={{ xs: 12, sm: 6, md: 4 }}>

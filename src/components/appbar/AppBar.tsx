@@ -7,11 +7,11 @@ import {
     AppBar as MUIAppBar,
     Toolbar,
     useMediaQuery,
-    useScrollTrigger,
-    useTheme,
+    useTheme
 } from '@mui/material'
 import { useState, type FC } from 'react'
-import gdd_logo from '../../assets/gdd_logo.png'
+// import gdd_logo from '../../assets/gdd_logo.png'
+import gdd_logo from '../../assets/gdd_logo2.png'
 import SectionLink from '../global/SectionLink'
 import MobileNavigation from './MobileNavigation'
 import Navigation from './Navigation'
@@ -33,11 +33,6 @@ const AppBar: FC = () => {
         setOpen(state)
     }
 
-    const trigger = useScrollTrigger({
-        disableHysteresis: true,
-        threshold: 0,
-    })
-
     return (
         <>
             <MUIAppBar
@@ -45,10 +40,7 @@ const AppBar: FC = () => {
                 elevation={0}
                 sx={{
                     bgcolor: 'white',
-                    borderBottom: trigger
-                        ? `1px solid ${theme.palette.divider}`
-                        : 'none',
-                    transition: 'border-bottom 0.3s ease',
+                    borderBottom: `1px solid ${theme.palette.divider}`,
                 }}
             >
                 <Container maxWidth="xl">
@@ -66,8 +58,9 @@ const AppBar: FC = () => {
                                 underline="none"
                             >
                                 <img
+                                    style={{ verticalAlign: 'middle' }}
                                     src={gdd_logo}
-                                    width={100}
+                                    width={120}
                                     alt="Logo do site"
                                 />
                             </Link>

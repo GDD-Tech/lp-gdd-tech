@@ -1,10 +1,4 @@
-import {
-    Box,
-    Container,
-    List,
-    ListItem,
-    Typography
-} from '@mui/material'
+import { Box, Container, List, ListItem, Typography } from '@mui/material'
 import { type FC } from 'react'
 import image_desc1 from '../../assets/image_desc1.png'
 import image_desc2 from '../../assets/image_desc2.png'
@@ -122,23 +116,29 @@ const Motivations: FC = () => {
                             Inovação e Performance
                         </SectionContext>
                         <Title textAlign={'left'} gutterBottom>
-                            Otimize seus processos com tecnologia
+                            Tecnologia que cresce junto com você
                         </Title>
                         <Subtitle textAlign={'left'}>
-                            Automatize fluxos de trabalho e aumente a eficiência
-                            da sua equipe.
+                            Não entregamos apenas software: acompanhamos sua
+                            jornada para garantir que sua solução continue
+                            eficiente e segura.
                         </Subtitle>
 
                         <List sx={{ gap: 2 }}>
                             <CustomListItem
                                 index="01"
-                                title="Desenvolvimento sob medida"
-                                description="Aplicações web, mobile e sistemas escaláveis, criados para atender às necessidades específicas do seu negócio."
+                                title="Soluções sob medida"
+                                description="Sistemas ágeis, seguros e escaláveis, adaptados à realidade do seu negócio."
                             />
                             <CustomListItem
                                 index="02"
                                 title="Integrações inteligentes"
-                                description="Conecte plataformas, APIs e serviços em um ecossistema digital totalmente integrado."
+                                description="Conectamos plataformas e automatizamos fluxos para eliminar retrabalho."
+                            />
+                            <CustomListItem
+                                index="03"
+                                title="Suporte contínuo"
+                                description="Monitoramento, manutenção e atendimento especializado para garantir tranquilidade após a entrega."
                             />
                         </List>
                     </Box>
@@ -157,11 +157,12 @@ const Motivations: FC = () => {
                             Dados e Inteligência
                         </SectionContext>
                         <Title textAlign={'left'} gutterBottom>
-                            Decisões guiadas por tecnologia
+                            Decisões guiadas por dados reais
                         </Title>
                         <Subtitle textAlign={'left'} mb={3}>
-                            Transformamos dados em insights para melhorar
-                            resultados e aumentar a performance.
+                            Transformamos informações em insights estratégicos
+                            para otimizar sua performance e apoiar decisões mais
+                            assertivas.
                         </Subtitle>
                         <Box display={'flex'} justifyContent={'left'}>
                             <SectionLink
