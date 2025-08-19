@@ -15,19 +15,27 @@ interface MobileNavigationProps {
     toggleDrawer: (open: boolean) => void
 }
 
+const scrollToSection = (id: string) => {
+    const el = document.getElementById(id)
+    if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
+}
+
 const MobileNavigation: FC<MobileNavigationProps> = ({
     open,
     toggleDrawer,
 }) => {
     return (
         <Drawer
-            anchor="left"
+            anchor="right"
             open={open}
             onClose={() => toggleDrawer(false)}
             slotProps={{
                 backdrop: {
                     sx: {
-                        backgroundColor: 'rgba(0, 0, 0, 0.5)',
+                        backgroundColor: 'rgb(0, 69, 131, 0.7)',
+                        backdropFilter: 'blur(2px)',
                     },
                 },
                 paper: {
@@ -40,7 +48,14 @@ const MobileNavigation: FC<MobileNavigationProps> = ({
                 },
             }}
         >
-            <Box display="flex" justifyContent="flex-end" p={2}>
+            <Box
+                sx={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'flex-end',
+                    p: 1,
+                }}
+            >
                 <IconButton
                     onClick={() => toggleDrawer(false)}
                     sx={{ color: '#fff' }}
@@ -50,15 +65,61 @@ const MobileNavigation: FC<MobileNavigationProps> = ({
             </Box>
             <List>
                 <ListItem disablePadding>
-                    <ListItemButton onClick={() => toggleDrawer(false)}>
-                        <ListItemText
-                            primary={'teste'}
-                            sx={{ textAlign: 'center' }}
-                        />
+                    <ListItemButton
+                        onClick={() => {
+                            toggleDrawer(false)
+                            setTimeout(() => scrollToSection('solucoes'), 250)
+                        }}
+                        sx={{
+                            color: '#fff',
+                        }}
+                    >
+                        <ListItemText primary={'Soluções'} />
+                    </ListItemButton>
+                </ListItem>
+                <ListItem disablePadding>
+                    <ListItemButton
+                        onClick={() => {
+                            toggleDrawer(false)
+                            setTimeout(() => scrollToSection('sobre'), 250)
+                        }}
+                        sx={{
+                            color: '#fff',
+                        }}
+                    >
+                        <ListItemText primary={'Sobre'} />
+                    </ListItemButton>
+                </ListItem>
+                <ListItem disablePadding>
+                    <ListItemButton
+                        onClick={() => {
+                            toggleDrawer(false)
+                            setTimeout(
+                                () => scrollToSection('funcionamento'),
+                                250
+                            )
+                        }}
+                        sx={{
+                            color: '#fff',
+                        }}
+                    >
+                        <ListItemText primary={'Como funciona'} />
+                    </ListItemButton>
+                </ListItem>
+                <ListItem disablePadding>
+                    <ListItemButton
+                        onClick={() => {
+                            toggleDrawer(false)
+                            setTimeout(() => scrollToSection('contato'), 250)
+                        }}
+                        sx={{
+                            color: '#fff',
+                        }}
+                    >
+                        <ListItemText primary={'Entre em contato'} />
                     </ListItemButton>
                 </ListItem>
             </List>
-            {/* <ContactButton /> */}
         </Drawer>
     )
 }

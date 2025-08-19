@@ -10,7 +10,6 @@ import {
     useTheme
 } from '@mui/material'
 import { useState, type FC } from 'react'
-// import gdd_logo from '../../assets/gdd_logo.png'
 import gdd_logo from '../../assets/gdd_logo2.png'
 import SectionLink from '../global/SectionLink'
 import MobileNavigation from './MobileNavigation'
