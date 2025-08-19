@@ -1,13 +1,7 @@
-import { Box, Button, List, ListItem } from '@mui/material'
+import { Box, List, ListItem } from '@mui/material'
 import type { BoxProps } from '@mui/system'
 import { type FC } from 'react'
-
-const scrollToSection = (id: string) => {
-    const el = document.getElementById(id)
-    if (el) {
-        el.scrollIntoView({ behavior: 'smooth', block: 'start' })
-    }
-}
+import SectionLink from '../global/SectionLink'
 
 const Navigation: FC<BoxProps> = ({ ...props }) => {
     return (
@@ -30,31 +24,42 @@ const Navigation: FC<BoxProps> = ({ ...props }) => {
                     }}
                 >
                     <ListItem sx={{ padding: 0 }}>
-                        <Button
+                        <SectionLink
+                            id={'solucoes'}
                             component={'a'}
-                            sx={{ textTransform: 'none' }}
-                            onClick={() => scrollToSection('solucoes')}
+                            sx={{
+                                textTransform: 'none',
+                                '&:hover': { bgcolor: 'transparent' },
+                            }}
                         >
                             Soluções
-                        </Button>
+                        </SectionLink>
                     </ListItem>
                     <ListItem sx={{ padding: 0 }}>
-                        <Button
+                        <SectionLink
+                            id={'sobre'}
                             component={'a'}
-                            sx={{ textTransform: 'none' }}
-                            onClick={() => scrollToSection('sobre')}
+                            sx={{
+                                textTransform: 'none',
+
+                                '&:hover': { bgcolor: 'transparent' },
+                            }}
                         >
                             Sobre
-                        </Button>
+                        </SectionLink>
                     </ListItem>
                     <ListItem sx={{ padding: 0 }}>
-                        <Button
+                        <SectionLink
+                            id={'funcionamento'}
                             component={'a'}
-                            sx={{ textTransform: 'none', minWidth: 130 }}
-                            onClick={() => scrollToSection('funcionamento')}
+                            sx={{
+                                textTransform: 'none',
+                                minWidth: 130,
+                                '&:hover': { bgcolor: 'transparent' },
+                            }}
                         >
                             Como funciona
-                        </Button>
+                        </SectionLink>
                     </ListItem>
                 </List>
             </nav>

@@ -1,16 +1,16 @@
 import {
     Box,
-    Button,
     Container,
     List,
     ListItem,
-    Typography,
+    Typography
 } from '@mui/material'
 import { type FC } from 'react'
 import image_desc1 from '../../assets/image_desc1.png'
 import image_desc2 from '../../assets/image_desc2.png'
 import Section from '../global/Section'
 import SectionContext from '../global/SectionContext'
+import SectionLink from '../global/SectionLink'
 import Subtitle from '../global/Subtitle'
 import Title from '../global/Title'
 
@@ -164,9 +164,20 @@ const Motivations: FC = () => {
                             resultados e aumentar a performance.
                         </Subtitle>
                         <Box display={'flex'} justifyContent={'left'}>
-                            <Button variant="contained" disableElevation>
-                                Know more
-                            </Button>
+                            <SectionLink
+                                id="contato"
+                                variant="contained"
+                                size="large"
+                                disableElevation
+                                sx={{
+                                    backgroundColor: '#004583',
+                                    ':hover': {
+                                        backgroundColor: '#005bb5',
+                                    },
+                                }}
+                            >
+                                Saiba mais
+                            </SectionLink>
                         </Box>
                     </Box>
                     <Box
@@ -195,7 +206,7 @@ const Motivations: FC = () => {
                                 background:
                                     'linear-gradient(90deg, #165DAA 10%, #A8D3F8 100%)',
                                 position: 'absolute',
-                                bottom: 0,
+                                bottom: 6,
                                 left: 0,
                                 zIndex: 1,
                             }}

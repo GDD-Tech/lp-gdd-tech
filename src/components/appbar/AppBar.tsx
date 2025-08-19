@@ -12,9 +12,16 @@ import {
 } from '@mui/material'
 import { useState, type FC } from 'react'
 import gdd_logo from '../../assets/gdd_logo.png'
-import ContactButton from '../global/ContactButton'
+import SectionLink from '../global/SectionLink'
 import MobileNavigation from './MobileNavigation'
 import Navigation from './Navigation'
+
+const scrollToSection = (id: string) => {
+    const el = document.getElementById(id)
+    if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' })
+    }
+}
 
 const AppBar: FC = () => {
     const [open, setOpen] = useState<boolean>(false)
@@ -53,7 +60,11 @@ const AppBar: FC = () => {
                             flex={1}
                             width="100%"
                         >
-                            <Link href="#" underline="none">
+                            <Link
+                                component="button"
+                                onClick={() => scrollToSection('apresentacao')}
+                                underline="none"
+                            >
                                 <img
                                     src={gdd_logo}
                                     width={100}
@@ -62,9 +73,24 @@ const AppBar: FC = () => {
                             </Link>
 
                             <Navigation display={isMobile ? 'none' : 'block'} />
-                            <ContactButton
-                                sx={{ display: isMobile ? 'none' : 'block' }}
-                            />
+                            <SectionLink
+                                id="contato"
+                                variant="contained"
+                                disableElevation
+                                sx={{
+                                    px: 3,
+                                    textTransform: 'none',
+                                    fontWeight: 600,
+                                    fontSize: 16,
+                                    backgroundColor: '#004583',
+                                    ':hover': {
+                                        backgroundColor: '#005bb5',
+                                    },
+                                    display: isMobile ? 'none' : 'block',
+                                }}
+                            >
+                                Entre em contato
+                            </SectionLink>
                             <IconButton
                                 sx={{ display: isMobile ? 'block' : 'none' }}
                                 onClick={toggleDrawer(true)}

@@ -1,16 +1,10 @@
-import { Box, Button, Container, Stack, Typography } from '@mui/material'
+import { Box, Container, Stack, Typography } from '@mui/material'
 import { type FC } from 'react'
-import hero_image from '../../assets/hero_image.png'
+import hero_test from '../../assets/hero_test.png'
 import Section from '../global/Section'
-import Title from '../global/Title'
+import SectionLink from '../global/SectionLink'
 import Subtitle from '../global/Subtitle'
-
-const scrollToSection = (id: string) => {
-    const el = document.getElementById(id)
-    if (el) {
-        el.scrollIntoView({ behavior: 'smooth', block: 'start' })
-    }
-}
+import Title from '../global/Title'
 
 const Hero: FC = () => {
     return (
@@ -59,12 +53,10 @@ const Hero: FC = () => {
                             spacing={2}
                             sx={{ width: '100%' }}
                         >
-                            <Button
+                            <SectionLink
+                                id="contato"
                                 variant="contained"
                                 size="large"
-                                onClick={() => {
-                                    scrollToSection('contato')
-                                }}
                                 disableElevation
                                 sx={{
                                     backgroundColor: '#004583',
@@ -74,13 +66,11 @@ const Hero: FC = () => {
                                 }}
                             >
                                 Começar projeto
-                            </Button>
-                            <Button
+                            </SectionLink>
+                            <SectionLink
+                                id={'solucoes'}
                                 variant="outlined"
                                 size="large"
-                                onClick={() => {
-                                    scrollToSection('solucoes')
-                                }}
                                 sx={{
                                     borderColor: '#004583',
                                     color: '#004583',
@@ -91,7 +81,7 @@ const Hero: FC = () => {
                                 }}
                             >
                                 Saiba Mais
-                            </Button>
+                            </SectionLink>
                         </Stack>
                     </Box>
 
@@ -105,11 +95,11 @@ const Hero: FC = () => {
                         }}
                     >
                         <img
-                            src={hero_image}
+                            src={hero_test}
                             alt="Tecnologia"
                             style={{
                                 maxWidth: '100%',
-                                maxHeight: 400,
+                                maxHeight: 500,
                                 height: 'auto',
                             }}
                         />

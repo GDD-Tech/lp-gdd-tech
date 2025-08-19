@@ -10,6 +10,7 @@ import {
 } from '@mui/material'
 import Title from '../global/Title'
 import Subtitle from '../global/Subtitle'
+import { WhatsApp } from '@mui/icons-material'
 
 const Contact: FC = () => {
     return (
@@ -17,7 +18,8 @@ const Contact: FC = () => {
             id="contato"
             py={4}
             sx={{
-                background: 'linear-gradient(180deg, #F2F1FF 0%, #F6F6FF 3%, white 20%)',
+                background:
+                    'linear-gradient(180deg, #F2F1FF 0%, #F6F6FF 3%, white 20%)',
             }}
         >
             <Container
@@ -37,13 +39,13 @@ const Contact: FC = () => {
                 <Paper
                     sx={{
                         borderRadius: 4,
-                        mx: { xs: 2, lg: 4 },
+                        mx: { xs: 0, lg: 4 },
                         py: 6,
-                        px: { xs: 3, md: 6 },
+                        px: { xs: 2, md: 6 },
                         my: 4,
                         backgroundColor: '#f9fbfd',
                     }}
-                    elevation={2}
+                    elevation={1}
                 >
                     <Box
                         component="form"
@@ -57,8 +59,7 @@ const Contact: FC = () => {
                             mx: 'auto',
                         }}
                     >
-                        {/* Linha 1 */}
-                        <Box
+                        {/* <Box
                             sx={{
                                 display: 'flex',
                                 flexDirection: { xs: 'column', md: 'row' },
@@ -77,7 +78,6 @@ const Contact: FC = () => {
                             />
                         </Box>
 
-                        {/* Linha 2 */}
                         <Box
                             sx={{
                                 display: 'flex',
@@ -97,18 +97,16 @@ const Contact: FC = () => {
                                 type="tel"
                                 variant="outlined"
                             />
-                        </Box>
+                        </Box> */}
 
-                        {/* Mensagem */}
                         <TextField
                             fullWidth
-                            placeholder="Conte-nos sobre o seu projeto"
+                            placeholder="Conte-nos sobre a sua ideia"
                             multiline
                             rows={4}
                             variant="outlined"
                         />
 
-                        {/* Texto + Botão */}
                         <Box textAlign="center" mt={2}>
                             <Typography
                                 variant="body2"
@@ -122,14 +120,13 @@ const Contact: FC = () => {
                                 variant="contained"
                                 size="large"
                                 disableElevation
+                                startIcon={<WhatsApp />}
+                                color="success"
                                 sx={{
-                                    backgroundColor: '#6366f1',
-                                    borderRadius: 2,
                                     px: 6,
                                     py: 1.5,
                                     textTransform: 'none',
                                     fontWeight: 'bold',
-                                    '&:hover': { backgroundColor: '#4f46e5' },
                                 }}
                             >
                                 Enviar mensagem

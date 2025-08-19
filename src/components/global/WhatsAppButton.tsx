@@ -2,10 +2,11 @@ import { WhatsApp } from '@mui/icons-material'
 import { Fab, Zoom } from '@mui/material'
 import type { FC } from 'react';
 
+const { VITE_WHATSAPP_NUMBER } = import.meta.env
+
 const WhatsAppButton: FC = () => {
-    const phone = '5551998746202';
     const message = 'Olá. Encontrei seu contato pelo site e gostaria de saber mais sobre os serviços oferecidos.'
-    const whatsappLink = `https://wa.me/${phone}?text=${encodeURIComponent(message)}`;
+    const whatsappLink = `https://wa.me/${VITE_WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
 
     return (
         <Zoom in>

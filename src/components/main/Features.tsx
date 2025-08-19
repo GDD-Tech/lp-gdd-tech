@@ -38,7 +38,14 @@ const Features: FC = () => {
                     seu negócio.
                 </Subtitle>
             </Container>
-            <Paper sx={{ borderRadius: 4, mx: { xs: 2, lg: 4 }, py: 8, px: 4 }}>
+            <Paper
+                sx={{
+                    borderRadius: 4,
+                    mx: { xs: 2, lg: 4 },
+                    py: 8,
+                    px: { xs: 0, md: 4 },
+                }}
+            >
                 <Grid container spacing={8}>
                     <Grid size={{ xs: 12, sm: 6, md: 4 }}>
                         <FeatureItem
